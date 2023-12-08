@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 from librarian.ui import (
     wrap_doc_in_html,
