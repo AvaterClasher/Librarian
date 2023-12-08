@@ -93,14 +93,6 @@ with st.form(key="qa_form"):
     query = st.text_area("Ask a question about the document")
     submit = st.form_submit_button("Submit")
 
-st.markdown("---")
-st.markdown("# About")
-st.markdown(
-    "Librarian 📖 allows you to ask questions about your ")
-st.markdown("Made by [AvaterClasher](https://github.com/AvaterClasher)")
-st.markdown("---")
-
-
 if show_full_doc:
     with st.expander("Document"):
         # Hack to get around st.markdown rendering LaTeX
