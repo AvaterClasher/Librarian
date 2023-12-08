@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <h1 align="center">
 Librarian 📖
 </h1>
