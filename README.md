@@ -14,7 +14,7 @@ Librarian 📖
 
 Upload your documents and get answers to your questions, with citations from the text.
 
-Link to the deployed app: [Website](https://librarian-gpt.streamlit.app)
+Link to the deployed app: [Librarian GPT](https://librarian-gpt.streamlit.app)
 
 ## Installation
 
