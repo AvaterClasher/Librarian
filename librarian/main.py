@@ -63,12 +63,6 @@ uploaded_file = st.file_uploader(
 
 model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
 
-with st.expander("Advanced Options"):
-    return_all_chunks = st.checkbox(
-        "Show all chunks retrieved from vector search")
-    show_full_doc = st.checkbox("Show parsed contents of the document")
-
-
 if not uploaded_file:
     st.stop()
 
@@ -98,6 +92,13 @@ with st.spinner("Indexing document... This may take a while⏳"):
 with st.form(key="qa_form"):
     query = st.text_area("Ask a question about the document")
     submit = st.form_submit_button("Submit")
+
+st.markdown("---")
+st.markdown("# About")
+st.markdown(
+    "Librarian 📖 allows you to ask questions about your ")
+st.markdown("Made by [AvaterClasher](https://github.com/AvaterClasher)")
+st.markdown("---")
 
 
 if show_full_doc:
@@ -133,9 +134,3 @@ if submit:
             st.markdown(source.metadata["source"])
             st.markdown("---")
 
-st.markdown("---")
-st.markdown("# About")
-st.markdown(
-    "Librarian 📖 allows you to ask questions about your ")
-st.markdown("Made by [AvaterClasher](https://github.com/AvaterClasher)")
-st.markdown("---")
