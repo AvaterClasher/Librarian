@@ -1,7 +1,5 @@
 import streamlit as st
 
-from librarian.components.sidebar import sidebar
-
 from librarian.ui import (
     wrap_doc_in_html,
     is_query_valid,
@@ -54,11 +52,7 @@ st.markdown(
 st.markdown("Made by [AvaterClasher](https://github.com/AvaterClasher)")
 st.markdown("---")
 
-
-sidebar()
-
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
-
 
 if not openai_api_key:
     st.warning(
