@@ -46,13 +46,6 @@ api_key_input = st.text_input(
 
 st.session_state["OPENAI_API_KEY"] = api_key_input
 
-st.markdown("---")
-st.markdown("# About")
-st.markdown(
-    "Librarian 📖 allows you to ask questions about your ")
-st.markdown("Made by [AvaterClasher](https://github.com/AvaterClasher)")
-st.markdown("---")
-
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 if not openai_api_key:
@@ -139,3 +132,10 @@ if submit:
             st.markdown(source.page_content)
             st.markdown(source.metadata["source"])
             st.markdown("---")
+
+st.markdown("---")
+st.markdown("# About")
+st.markdown(
+    "Librarian 📖 allows you to ask questions about your ")
+st.markdown("Made by [AvaterClasher](https://github.com/AvaterClasher)")
+st.markdown("---")
